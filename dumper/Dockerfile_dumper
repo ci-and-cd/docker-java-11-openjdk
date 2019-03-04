@@ -1,0 +1,11 @@
+
+FROM cirepo/nix:2.2.1-alpine-3.9
+
+
+COPY --chown=alpine:alpine docker /home/alpine/data
+
+
+# Process image layers
+RUN cd /home/${USER:-alpine} \
+  && ./data/dump.sh
+#  && sudo chown -R ${USER:-alpine}:$(id -gn) /data/root/home/${USER:-alpine}

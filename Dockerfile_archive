@@ -1,0 +1,5 @@
+
+FROM scratch
+
+
+COPY --from=tmp/dumper:latest /data/root /data/root
