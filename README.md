@@ -8,7 +8,7 @@ OpenJDK11 installed at `/usr/lib/jvm/java-11-openjdk` (travis-ci style JAVA_HOME
 
 Dockerfile [ci-and-cd/docker-java-11-openjdk on Github](https://github.com/ci-and-cd/docker-java-11-openjdk)
 
-[cirepo/java-openjdk on Docker Hub](https://hub.docker.com/r/cirepo/java-openjdk/)
+[cirepo/java-openjdk on Docker Hub](https://hub.docker.com/r/cirepo/java-11-openjdk/)
 
 
 The main caveat to note is that it does use musl libc instead of glibc and friends,

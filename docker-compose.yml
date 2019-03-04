@@ -11,7 +11,7 @@ services:
       #- IMAGE_ARG_FILESERVER=${IMAGE_ARG_FILESERVER:-http://fileserver.infra.top}
       - IMAGE_ARG_JAVA11_VERSION=${IMAGE_ARG_JAVA11_VERSION:-11.0.2}
       - IMAGE_ARG_JAVA11_PACKAGE_DIGEST=${IMAGE_ARG_JAVA11_PACKAGE_DIGEST:-99be79935354f5c0df1ad293620ea36d13f48ec3ea870c838f20c504c9668b57}
-    image: ${IMAGE_PREFIX:-cirepo/}${IMAGE_NAME:-java-openjdk}:${IMAGE_TAG:-11.0.2-alpine-3.9}
+    image: ${IMAGE_PREFIX:-cirepo/}${IMAGE_NAME:-java-11-openjdk}:${IMAGE_TAG:-11.0.2-alpine-3.9}
   #docker-compose build dumper
   dumper:
     build:
@@ -23,4 +23,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_archive
-    image: ${IMAGE_PREFIX:-cirepo/}${IMAGE_NAME:-java-openjdk}:${IMAGE_TAG:-11.0.2-alpine-3.9}-archive
+    image: ${IMAGE_PREFIX:-cirepo/}${IMAGE_NAME:-java-11-openjdk}:${IMAGE_TAG:-11.0.2-alpine-3.9}-archive
