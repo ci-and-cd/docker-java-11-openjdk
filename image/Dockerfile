@@ -26,7 +26,7 @@ COPY --chown=root:root docker /data
 # wget -O /openjdk.tgz "https://download.java.net/java/GA/jdk11/9/GPL/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz"; \
 RUN set -eux \
   && if [[ ! -f /data/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz ]]; then \
-       ${ARIA2C_DOWNLOAD} -d / -o openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz \
+       ${ARIA2C_DOWNLOAD} -d /data -o openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz \
        ${IMAGE_ARG_FILESERVER:-https://download.java.net}/java/GA/jdk11/9/GPL/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz; \
      fi \
   && echo "${IMAGE_ARG_JAVA11_PACKAGE_DIGEST:-99be79935354f5c0df1ad293620ea36d13f48ec3ea870c838f20c504c9668b57} */data/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz" | sha256sum -c - \
