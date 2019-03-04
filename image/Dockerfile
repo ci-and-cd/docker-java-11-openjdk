@@ -18,7 +18,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk
 ENV PATH=${JAVA_HOME}/bin:${PATH}
 
 
-COPY --from=cirepo/glibc:2.29-r0-alpine-3.9-SNAPSHOT-archive /data/root /
+COPY --from=cirepo/glibc:2.29-r0-alpine-3.9-archive /data/root /
 
 
 COPY --chown=root:root docker /data
