@@ -14,7 +14,7 @@ ARG IMAGE_ARG_JAVA11_PACKAGE_DIGEST
 # "For Alpine Linux, builds are produced on a reduced schedule and may not be in sync with the other platforms."
 
 
-ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=${JAVA_HOME}/bin:${PATH}
 
 

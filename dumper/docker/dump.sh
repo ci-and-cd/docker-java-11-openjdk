@@ -11,7 +11,7 @@ for layer in $(pwd)/data/image/*/layer.tar; do
     for element in $(tar -tf ${layer} | grep -E '^dev/.*' | sort -r -n); do echo delete ${element}; tar --delete -f ${layer} "${element}" || echo error on delete ${element}; done
     #for element in $(tar -tf ${layer} | grep -E '^etc/'   | sort -r -n); do echo delete ${element}; tar --delete -f ${layer} "${element}" || echo error on delete ${element}; done
 
-    if [[ -n "$(tar -tf ${layer} | grep 'java-11-openjdk')" ]]; then echo found java-11-openjdk in ${layer}; LAYERS+=(${layer}); fi
+    if [[ -n "$(tar -tf ${layer} | grep 'java-11-openjdk-amd64')" ]]; then echo found java-11-openjdk-amd64 in ${layer}; LAYERS+=(${layer}); fi
 done
 
 echo -e "merge layers '${LAYERS[@]}' into one\n"

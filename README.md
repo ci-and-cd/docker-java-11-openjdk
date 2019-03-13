@@ -3,7 +3,7 @@
 docker-java-11-openjdk
 
 
-OpenJDK11 installed at `/usr/lib/jvm/java-11-openjdk` (travis-ci style JAVA_HOME)
+OpenJDK11 installed at `/usr/lib/jvm/java-11-openjdk-amd64` (travis-ci style JAVA_HOME)
 
 
 Dockerfile [ci-and-cd/docker-java-11-openjdk on Github](https://github.com/ci-and-cd/docker-java-11-openjdk)
@@ -23,6 +23,6 @@ so this variant is usually a very safe choice.
 
 FROM alpine:3.9
 COPY --from=cirepo/glibc:2.29-r0-alpine-3.9-archive /data/root /
-COPY --from=cirepo/java-11-openjdk:11.0.2-alpine-3.9-archive /data/root/usr/lib/jvm/java-11-openjdk /usr/lib/jvm/java-11-openjdk
+COPY --from=cirepo/java-11-openjdk:11.0.2-alpine-3.9-archive /data/root/usr/lib/jvm/java-11-openjdk-amd64 /usr/lib/jvm/java-11-openjdk-amd64
 
 ```
