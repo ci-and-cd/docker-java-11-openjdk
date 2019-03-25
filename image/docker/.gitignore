@@ -3,6 +3,7 @@
 
 # But not these files...
 !/.gitignore
+!/cacerts
 # etc...
 
 # ...even if they are in subdirectories

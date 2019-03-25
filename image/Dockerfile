@@ -33,6 +33,8 @@ RUN set -eux \
   && mkdir -p "${JAVA_HOME}" \
   && tar --extract --file /data/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz --directory "${JAVA_HOME}" --strip-components 1 \
   && rm /data/openjdk-${IMAGE_ARG_JAVA11_VERSION:-11.0.2}_linux-x64_bin.tar.gz \
+  && cp -f /data/cacerts ${JAVA_HOME}/lib/security/cacerts \
+  && rm -f /data/cacerts \
   \
 # https://github.com/docker-library/openjdk/issues/212#issuecomment-420979840
 # https://openjdk.java.net/jeps/341
